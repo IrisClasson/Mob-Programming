@@ -1,3 +1,6 @@
+// Ux när man ändrar visar inte t.ex save
+// 
+
 // live reload on save
 // npm install reload -g --save-dev
 // reload -b in index.html folder
@@ -70,7 +73,6 @@ var taskIncomplete=function(){
     bindTaskEvents(listItem,taskCompleted);
 }
 
-addButton.onclick=addTask;
 addButton.addEventListener("click",addTask);
 
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
