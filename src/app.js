@@ -33,6 +33,9 @@ var createNewTaskElement=function(taskString){
 
 var addTask=function(){
 	var listItem=createNewTaskElement(taskInput.value);
+	console.log("Log entry:");
+	console.log(listItem);
+
 	incompleteTaskHolder.appendChild(listItem);
 	bindTaskEvents(listItem, taskCompleted);
 	taskInput.value="";
@@ -70,7 +73,6 @@ var taskIncomplete=function(){
     bindTaskEvents(listItem,taskCompleted);
 }
 
-addButton.onclick=addTask;
 addButton.addEventListener("click",addTask);
 
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
